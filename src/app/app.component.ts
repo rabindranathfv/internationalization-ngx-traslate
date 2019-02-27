@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+
+// translate service
+import {TranslateService} from '@ngx-translate/core'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +11,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'internationalization-ngx-traslate';
+
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
 }

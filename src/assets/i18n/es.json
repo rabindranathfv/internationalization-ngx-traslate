@@ -1,0 +1,7 @@
+{
+    "demo": {
+        "title": "Demo en español",
+        "text": "demostracion de ngx-traslate en ESPAÑOL",
+        "greeting": "Hola {{name}}!"
+    }
+}

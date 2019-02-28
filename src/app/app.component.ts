@@ -15,4 +15,11 @@ export class AppComponent {
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
   }
+
+  /**
+   * name
+   */
+  public useLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

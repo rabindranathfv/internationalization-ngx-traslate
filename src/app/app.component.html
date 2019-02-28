@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
+    <h1>using PIPES</h1>
     <h1>{{ 'demo.title' | translate }}</h1>
 </div>
 <h2>{{ 'demo.greeting' | translate:{'name':'Rabindranath'} }}</h2>
@@ -8,9 +9,16 @@
         <h3>{{ 'demo.text' | translate }}</h3>
     </li>
 </ul>
+<!-- Se puede usar directivas para manejar el traslate igualmente -->
+<!-- translation: directive (key as attribute) -->
+<h3>using DIRECTIVES</h3>
+<p [translate]="'demo.title'"></p>
+<!-- translation: directive (key as content of element)-->
+<p translate [translateParams]="{name: 'Camilo'}">demo.greeting</p>
 
 <div>
     <button type="button" class="btn btn-outline-primary" (click)="useLanguage('en')">INGLES</button>
     <button type="button" class="btn btn-outline-primary" (click)="useLanguage('es')">ESPAÑOL</button>
 </div>
+
 <router-outlet></router-outlet>
